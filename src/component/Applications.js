@@ -142,7 +142,7 @@ const ApplicationTile = (props) => {
           <Grid item>
             Duration :{" "}
             {application.job.duration !== 0
-              ? `${application.job.duration} month`
+              ? `https://deployment-backend-1-x6y0.onrender.com/${application.job.duration} month`
               : `Flexible`}
           </Grid>
           <Grid item>
