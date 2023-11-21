@@ -114,7 +114,7 @@ const JobTile = (props) => {
           <Grid item>Salary : &#8377; {job.salary} per month</Grid>
           <Grid item>
             Duration :{" "}
-            {job.duration !== 0 ? `${job.duration} month` : `Flexible`}
+            {job.duration !== 0 ? `https://deployment-backend-1-x6y0.onrender.com/${job.duration} month` : `Flexible`}
           </Grid>
           <Grid item>Posted By : {job.recruiter.name}</Grid>
           <Grid item>Application Deadline : {deadline}</Grid>
@@ -549,7 +549,7 @@ const Home = (props) => {
   const getData = () => {
     let searchParams = [];
     if (searchOptions.query !== "") {
-      searchParams = [...searchParams, `q=${searchOptions.query}`];
+      searchParams = [...searchParams, `q=https://deployment-backend-1-x6y0.onrender.com/${searchOptions.query}`];
     }
     if (searchOptions.jobType.fullTime) {
       searchParams = [...searchParams, `jobType=Full%20Time`];
@@ -563,17 +563,17 @@ const Home = (props) => {
     if (searchOptions.salary[0] != 0) {
       searchParams = [
         ...searchParams,
-        `salaryMin=${searchOptions.salary[0] * 1000}`,
+        `salaryMin=https://deployment-backend-1-x6y0.onrender.com/${searchOptions.salary[0] * 1000}`,
       ];
     }
     if (searchOptions.salary[1] != 100) {
       searchParams = [
         ...searchParams,
-        `salaryMax=${searchOptions.salary[1] * 1000}`,
+        `salaryMax=https://deployment-backend-1-x6y0.onrender.com/${searchOptions.salary[1] * 1000}`,
       ];
     }
     if (searchOptions.duration != "0") {
-      searchParams = [...searchParams, `duration=${searchOptions.duration}`];
+      searchParams = [...searchParams, `duration=https://deployment-backend-1-x6y0.onrender.com/${searchOptions.duration}`];
     }
 
     let asc = [],
@@ -583,9 +583,9 @@ const Home = (props) => {
       const item = searchOptions.sort[obj];
       if (item.status) {
         if (item.desc) {
-          desc = [...desc, `desc=${obj}`];
+          desc = [...desc, `desc=https://deployment-backend-1-x6y0.onrender.com/${obj}`];
         } else {
-          asc = [...asc, `asc=${obj}`];
+          asc = [...asc, `asc=https://deployment-backend-1-x6y0.onrender.com/${obj}`];
         }
       }
     });
