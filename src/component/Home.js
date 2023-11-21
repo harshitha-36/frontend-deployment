@@ -75,7 +75,7 @@ const JobTile = (props) => {
         },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
           },
         }
       )
@@ -594,7 +594,7 @@ const Home = (props) => {
     console.log(queryString);
     let address = apiList.jobs;
     if (queryString !== "") {
-      address = `${address}?${queryString}`;
+      address = `https://deployment-backend-1-x6y0.onrender.com/${address}?${queryString}`;
     }
 
     axios
