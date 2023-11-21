@@ -58,7 +58,7 @@ const CreateJobs = (props) => {
     axios
       .post(apiList.jobs, jobDetails, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
