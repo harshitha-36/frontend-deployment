@@ -61,7 +61,7 @@ const ApplicationTile = (props) => {
 
   const fetchRating = () => {
     axios
-      .get(`${apiList.rating}?id=${application.job._id}`, {
+      .get(`https://deployment-backend-1-x6y0.onrender.com/${apiList.rating}?id=${application.job._id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -230,7 +230,7 @@ const Applications = (props) => {
 
   const getData = () => {
     axios
-      .get(apiList.applications, {
+      .get(https://deployment-backend-1-x6y0.onrender.com/apiList.applications, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
