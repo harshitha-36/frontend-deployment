@@ -81,7 +81,7 @@ const Profile = (props) => {
     if (phone !== "") {
       updatedDetails = {
         ...profileDetails,
-        contactNumber: `+${phone}`,
+        contactNumber: `+https://deployment-backend-1-x6y0.onrender.com/${phone}`,
       };
     } else {
       updatedDetails = {
