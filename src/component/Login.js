@@ -74,7 +74,7 @@ const Login = (props) => {
     });
     if (verified) {
       axios
-        .post(https://deployment-backend-1-x6y0.onrender.com/apiList.login, loginDetails)
+        .post(apiList.login, loginDetails)
         .then((response) => {
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("type", response.data.type);
