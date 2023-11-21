@@ -63,7 +63,7 @@ const ApplicationTile = (props) => {
     axios
       .get(`https://deployment-backend-1-x6y0.onrender.com/${apiList.rating}?id=${application.job._id}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
