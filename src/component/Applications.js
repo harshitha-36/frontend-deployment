@@ -88,7 +88,7 @@ const ApplicationTile = (props) => {
         { rating: rating, jobId: application.job._id },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
           },
         }
       )
@@ -230,9 +230,9 @@ const Applications = (props) => {
 
   const getData = () => {
     axios
-      .get(https://deployment-backend-1-x6y0.onrender.com/apiList.applications, {
+      .get(apiList.applications, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
