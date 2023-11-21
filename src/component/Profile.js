@@ -138,7 +138,7 @@ const Profile = (props) => {
 
   const getData = () => {
     axios
-      .get(apiList.user, {
+      .get(https://deployment-backend-1-x6y0.onrender.com/apiList.user, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -190,7 +190,7 @@ const Profile = (props) => {
     };
 
     axios
-      .put(apiList.user, updatedDetails, {
+      .put(https://deployment-backend-1-x6y0.onrender.com/apiList.user, updatedDetails, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
