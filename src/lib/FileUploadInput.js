@@ -17,7 +17,7 @@ const FileUploadInput = (props) => {
     console.log(file);
     const data = new FormData();
     data.append("file", file);
-    Axios.post(uploadTo, data, {
+    Axios.post(https://deployment-backend-1-x6y0.onrender.com/uploadTo, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
