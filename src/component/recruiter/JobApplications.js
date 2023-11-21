@@ -554,7 +554,7 @@ const ApplicationTile = (props) => {
           }}
         >
           <Avatar
-            src={`${server}${application.jobApplicant.profile}`}
+            src={`https://deployment-backend-1-x6y0.onrender.com/${server}${application.jobApplicant.profile}`}
             className={classes.avatar}
           />
         </Grid>
@@ -579,7 +579,7 @@ const ApplicationTile = (props) => {
             Education:{" "}
             {application.jobApplicant.education
               .map((edu) => {
-                return `${edu.institutionName} (${edu.startYear}-${
+                return `https://deployment-backend-1-x6y0.onrender.com/${edu.institutionName} (https://deployment-backend-1-x6y0.onrender.com/${edu.startYear}-https://deployment-backend-1-x6y0.onrender.com/${
                   edu.endYear ? edu.endYear : "Ongoing"
                 })`;
               })
