@@ -535,7 +535,7 @@ const ApplicationTile = (props) => {
           }}
         >
           <Avatar
-            src={`${server}${application.jobApplicant.profile}`}
+            src={`https://deployment-backend-1-x6y0.onrender.com/${server}${application.jobApplicant.profile}`}
             className={classes.avatar}
           />
         </Grid>
@@ -727,9 +727,9 @@ const AcceptedApplicants = (props) => {
       const item = searchOptions.sort[obj];
       if (item.status) {
         if (item.desc) {
-          desc = [...desc, `desc=${obj}`];
+          desc = [...desc, `desc=https://deployment-backend-1-x6y0.onrender.com/${obj}`];
         } else {
-          asc = [...asc, `asc=${obj}`];
+          asc = [...asc, `asc=https://deployment-backend-1-x6y0.onrender.com/${obj}`];
         }
       }
     });
