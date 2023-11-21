@@ -410,7 +410,7 @@ const ApplicationTile = (props) => {
         { rating: rating, applicantId: application.jobApplicant.userId },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
           },
         }
       )
@@ -462,7 +462,7 @@ const ApplicationTile = (props) => {
       application.jobApplicant.resume &&
       application.jobApplicant.resume !== ""
     ) {
-      const address = `${server}${application.jobApplicant.resume}`;
+      const address = `https://deployment-backend-1-x6y0.onrender.com/${server}${application.jobApplicant.resume}`;
       console.log(address);
       axios(address, {
         method: "GET",
@@ -491,7 +491,7 @@ const ApplicationTile = (props) => {
   };
 
   const updateStatus = (status) => {
-    const address = `${apiList.applications}/${application._id}`;
+    const address = `https://deployment-backend-1-x6y0.onrender.com/${apiList.applications}/${application._id}`;
     const statusData = {
       status: status,
       dateOfJoining: new Date().toISOString(),
@@ -499,7 +499,7 @@ const ApplicationTile = (props) => {
     axios
       .put(address, statusData, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -737,9 +737,9 @@ const AcceptedApplicants = (props) => {
     searchParams = [...searchParams, ...asc, ...desc];
     const queryString = searchParams.join("&");
     console.log(queryString);
-    let address = `${apiList.applicants}`;
+    let address = `https://deployment-backend-1-x6y0.onrender.com/${apiList.applicants}`;
     if (queryString !== "") {
-      address = `${address}?${queryString}`;
+      address = `https://deployment-backend-1-x6y0.onrender.com/${address}?${queryString}`;
     }
 
     console.log(address);
@@ -747,7 +747,7 @@ const AcceptedApplicants = (props) => {
     axios
       .get(address, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
