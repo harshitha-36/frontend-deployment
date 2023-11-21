@@ -138,9 +138,9 @@ const Profile = (props) => {
 
   const getData = () => {
     axios
-      .get(https://deployment-backend-1-x6y0.onrender.com/apiList.user, {
+      .get(apiList.user, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -190,9 +190,9 @@ const Profile = (props) => {
     };
 
     axios
-      .put(https://deployment-backend-1-x6y0.onrender.com/apiList.user, updatedDetails, {
+      .put(apiList.user, updatedDetails, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
