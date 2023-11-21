@@ -93,9 +93,9 @@ const JobTile = (props) => {
   const handleDelete = () => {
     console.log(job._id);
     axios
-      .delete(`${apiList.jobs}/${job._id}`, {
+      .delete(`https://deployment-backend-1-x6y0.onrender.com/${apiList.jobs}/${job._id}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -120,9 +120,9 @@ const JobTile = (props) => {
 
   const handleJobUpdate = () => {
     axios
-      .put(`${apiList.jobs}/${job._id}`, jobDetails, {
+      .put(`https://deployment-backend-1-x6y0.onrender.com/${apiList.jobs}/${job._id}`, jobDetails, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -761,14 +761,14 @@ const MyJobs = (props) => {
     console.log(queryString);
     let address = apiList.jobs;
     if (queryString !== "") {
-      address = `${address}?${queryString}`;
+      address = `https://deployment-backend-1-x6y0.onrender.com/${address}?${queryString}`;
     }
 
     console.log(address);
     axios
       .get(address, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
