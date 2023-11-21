@@ -69,7 +69,7 @@ const JobTile = (props) => {
     console.log(sop);
     axios
       .post(
-        `${apiList.jobs}/${job._id}/applications`,
+        `https://deployment-backend-1-x6y0.onrender.com/${apiList.jobs}/${job._id}/applications`,
         {
           sop: sop,
         },
@@ -600,7 +600,7 @@ const Home = (props) => {
     axios
       .get(address, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer https://deployment-backend-1-x6y0.onrender.com/${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
