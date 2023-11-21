@@ -17,9 +17,9 @@ const FileUploadInput = (props) => {
     console.log(file);
     const data = new FormData();
     data.append("file", file);
-    Axios.post(https://deployment-backend-1-x6y0.onrender.com/uploadTo, data, {
+    Axios.post(uploadTo, data, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "https://deployment-backend-1-x6y0.onrender.com/multipart/form-data",
       },
       onUploadProgress: (progressEvent) => {
         setUploadPercentage(
